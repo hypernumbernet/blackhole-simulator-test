@@ -1,9 +1,14 @@
 QT += testlib
-QT -= gui
+QT += gui
 
 CONFIG += qt console warn_on depend_includepath testcase
 CONFIG -= app_bundle
+CONFIG += c++17
 
 TEMPLATE = app
 
-SOURCES +=  tst_myclassunittest.cpp
+SOURCES +=  tst_myclassunittest.cpp \
+    vector3unittest.cpp
+
+HEADERS += \
+    vector3unittest.h
