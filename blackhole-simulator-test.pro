@@ -8,7 +8,9 @@ CONFIG += c++17
 TEMPLATE = app
 
 SOURCES +=  tst_myclassunittest.cpp \
+    quaternionunittest.cpp \
     vector3unittest.cpp
 
 HEADERS += \
+    quaternionunittest.h \
     vector3unittest.h

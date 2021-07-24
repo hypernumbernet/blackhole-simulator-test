@@ -217,7 +217,7 @@ void Vector3UnitTest::test_constexpr()
     QVERIFY(v3.y() == 7.0);
     QVERIFY(v3.z() == 9.0);
 
-    constexpr Vector3<double> v4;
+    constexpr Vector3<double> v4(0,0,0);
     QVERIFY(v4.x() == 0.0);
     QVERIFY(v4.y() == 0.0);
     QVERIFY(v4.z() == 0.0);
