@@ -2,6 +2,7 @@
 
 #include "vector3unittest.h"
 #include "quaternionunittest.h"
+#include "octonionunittest.h"
 
 using namespace hnn;
 
@@ -35,6 +36,12 @@ private slots:
         ut.test_zero();
         ut.test_ln();
         ut.test_norm();
+    }
+
+    void test_octonion()
+    {
+        OctonionUnitTest ut;
+        ut.test_member();
     }
 };
 
