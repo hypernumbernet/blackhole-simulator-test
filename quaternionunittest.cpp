@@ -190,13 +190,13 @@ void QuaternionUnitTest::test_operator()
 
 void QuaternionUnitTest::test_zero()
 {
-    constexpr auto q0 = Quaternion<double>::zero();
+    auto q0 = Quaternion<double>::zero();
     QVERIFY(q0.re() == 0.0);
     QVERIFY(q0.i1() == 0.0);
     QVERIFY(q0.i2() == 0.0);
     QVERIFY(q0.i3() == 0.0);
 
-    constexpr auto q1 = Quaternion<double>::identity();
+    auto q1 = Quaternion<double>::identity();
     QVERIFY(q1.re() == 1.0);
     QVERIFY(q1.i1() == 0.0);
     QVERIFY(q1.i2() == 0.0);
@@ -240,8 +240,8 @@ void QuaternionUnitTest::test_ln()
 
 void QuaternionUnitTest::test_norm()
 {
-    constexpr Quaternion<double> q1(1,2,3,4);
-    constexpr double n1 = q1.norm();
+    Quaternion<double> q1(1,2,3,4);
+    double n1 = q1.norm();
     QVERIFY(n1 == 30.0);
 
     Quaternion<double> q2(1,2,3,4);

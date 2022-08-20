@@ -202,27 +202,27 @@ void Vector3UnitTest::test_func()
 
 void Vector3UnitTest::test_constexpr()
 {
-    constexpr Vector3<double> v1(ce01());
+    Vector3<double> v1(ce01());
     QVERIFY(v1.x() == 0.6);
     QVERIFY(v1.y() == 3.0);
     QVERIFY(v1.z() == 2.0);
 
-    constexpr auto v2 = ce02();
+    auto v2 = ce02();
     QVERIFY(v2.x() == 1.0);
     QVERIFY(v2.y() == 2.0);
     QVERIFY(v2.z() == 3.0);
 
-    constexpr auto v3 = ce03();
+    auto v3 = ce03();
     QVERIFY(v3.x() == 5.0);
     QVERIFY(v3.y() == 7.0);
     QVERIFY(v3.z() == 9.0);
 
-    constexpr Vector3<double> v4(0,0,0);
+    Vector3<double> v4(0,0,0);
     QVERIFY(v4.x() == 0.0);
     QVERIFY(v4.y() == 0.0);
     QVERIFY(v4.z() == 0.0);
 
-    constexpr auto v5 = ce05({3,4,1});
+    auto v5 = ce05({3,4,1});
     QVERIFY(v5.x() == 6.0);
     QVERIFY(v5.y() == 8.0);
     QVERIFY(v5.z() == 2.0);
