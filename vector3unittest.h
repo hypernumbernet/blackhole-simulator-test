@@ -15,27 +15,27 @@ public:
     void test_func();
     void test_constexpr();
 
-    static Vector3<double> ce01()
+    static Vector3 ce01()
     {
-        Vector3<double> v1(0.6, 3.0, 2.0);
+        Vector3 v1(0.6, 3.0, 2.0);
         return v1;
     }
 
-    static Vector3<double> ce02()
+    static Vector3 ce02()
     {
         return {1,2,3};
     }
 
-    static Vector3<double> ce03()
+    static Vector3 ce03()
     {
-        Vector3<double> v1(1,2,3);
-        Vector3<double> v2(4,5,6);
+        Vector3 v1(1,2,3);
+        Vector3 v2(4,5,6);
         auto v3 = v2 + v1;
         return v3;
     }
 
-    static Vector3<double> ce05(const Vector3<double>& v1)
+    static Vector3 ce05(const Vector3& v1)
     {
-        return Vector3<double>(v1 * 2);
+        return Vector3(v1 * 2);
     }
 };

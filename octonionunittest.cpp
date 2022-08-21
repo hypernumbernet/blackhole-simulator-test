@@ -6,9 +6,9 @@ OctonionUnitTest::OctonionUnitTest()
 }
 void OctonionUnitTest::test_member()
 {
-    Octonion<double> o0(0,0,0,0,1,2,3,4);
+    Octonion o0(0,0,0,0,1,2,3,4);
     o0.normalize();
-    Octonion<double> o1(3,4,5,6,0,0,0,0);
+    Octonion o1(3,4,5,6,0,0,0,0);
     o1.normalize();
 
     auto o2(o1.conjugated() * o0 * o1);
