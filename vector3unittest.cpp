@@ -198,6 +198,14 @@ void Vector3UnitTest::test_func()
     QVERIFY(v8c.x() == 13.0);
     QVERIFY(v8c.y() == 18.0);
     QVERIFY(v8c.z() == 33.0);
+
+    Vector3 v9(1.0/0.0,-1.0/0.0,0);
+    QVERIFY( ! v9.isfinite());
+    QVERIFY(v9.ismyself());
+
+    Vector3 v10(0.0/0.0,0.0/0.0,0);
+    QVERIFY( ! v10.isfinite());
+    QVERIFY( ! v10.ismyself());
 }
 
 void Vector3UnitTest::test_constexpr()
