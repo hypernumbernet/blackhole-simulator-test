@@ -3,6 +3,8 @@
 #include "vector3unittest.h"
 #include "quaternionunittest.h"
 #include "octonionunittest.h"
+#include "biquaternionunittest.h"
+#include "spacetimetest.h"
 
 using namespace hnn;
 
@@ -42,6 +44,19 @@ private slots:
     {
         OctonionUnitTest ut;
         ut.test_member();
+    }
+
+    void test_biquaternion()
+    {
+        BiquaternionUnitTest ut;
+        ut.test_member();
+        ut.test_LT();
+    }
+
+    void test_spacetime()
+    {
+        SpacetimeTest st;
+        st.test_member();
     }
 };
 

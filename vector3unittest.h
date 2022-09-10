@@ -1,6 +1,5 @@
 #pragma once
 
-#include <QtTest>
 #include "../blackhole-simulator/hnn/vector3.h"
 
 using namespace hnn;

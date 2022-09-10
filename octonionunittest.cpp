@@ -1,4 +1,8 @@
 #include "octonionunittest.h"
+#include "../blackhole-simulator/hnn/octonion.h"
+#include <QtTest>
+
+using namespace hnn;
 
 OctonionUnitTest::OctonionUnitTest()
 {

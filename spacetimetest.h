@@ -1,9 +1,9 @@
 #pragma once
 
-class OctonionUnitTest
+class SpacetimeTest
 {
 public:
-    OctonionUnitTest();
+    SpacetimeTest();
 
     void test_member();
 };

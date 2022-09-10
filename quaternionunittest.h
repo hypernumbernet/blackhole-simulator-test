@@ -1,12 +1,5 @@
 #pragma once
 
-#include <QtTest>
-#include <QQuaternion>
-
-#include "../blackhole-simulator/hnn/quaternion.h"
-
-using namespace hnn;
-
 class QuaternionUnitTest
 {
 public:

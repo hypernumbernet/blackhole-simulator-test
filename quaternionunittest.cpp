@@ -1,4 +1,9 @@
 #include "quaternionunittest.h"
+#include "../blackhole-simulator/hnn/quaternion.h"
+#include <QQuaternion>
+#include <QtTest>
+
+using namespace hnn;
 
 QuaternionUnitTest::QuaternionUnitTest()
 {
@@ -17,6 +22,18 @@ void QuaternionUnitTest::test_member()
     QVERIFY(d.i1() == 11.02);
     QVERIFY(d.i2() == 12.03);
     QVERIFY(d.i3() == 13.04);
+
+    const Quaternion q0 = Quaternion::exp(1.23, 0., 0.);
+    const double a0 = q0.arg();
+    QVERIFY(a0 == 1.23);
+
+    const Quaternion q1 = Quaternion::exp(0., 2.13, 0.);
+    const double a1 = q1.arg();
+    QVERIFY(a1 == 2.13);
+
+    const Quaternion q2 = Quaternion::exp(0., 0., 3.01);
+    const double a2 = q2.arg();
+    QVERIFY(a2 == 3.01);
 }
 
 void QuaternionUnitTest::test_constructor()
@@ -159,19 +176,19 @@ void QuaternionUnitTest::test_operator()
     QVERIFY(fabs(mq9d.i1() - 22.0) < 1e-5);
     QVERIFY(fabs(mq9d.i2() - 33.0) < 1e-5);
     QVERIFY(fabs(mq9d.i3() - 44.0) < 1e-5);
-    QVERIFY(mq9d.fuzzyCompare({11,22,33,44}));
+    QVERIFY(fuzzyCompare(mq9d, {11,22,33,44}));
 
     Quaternion q10a(9,6,2,7);
     Quaternion q10b(5,6,7,8);
     q10a /= q10b;
     q10a *= q10b;
-    QVERIFY(q10a.fuzzyCompare({9,6,2,7}));
+    QVERIFY(fuzzyCompare(q10a, {9,6,2,7}));
 
     Quaternion q11a(19,16,12,17);
     Quaternion q11b(15,16,17,18);
     q11a /= q11b;
     q11a *= q11b;
-    QVERIFY(q11a.fuzzyCompare({19,16,12,17}));
+    QVERIFY(fuzzyCompare(q11a, {19,16,12,17}));
 }
 
 void QuaternionUnitTest::test_zero()
