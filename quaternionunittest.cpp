@@ -176,19 +176,19 @@ void QuaternionUnitTest::test_operator()
     QVERIFY(fabs(mq9d.i1() - 22.0) < 1e-5);
     QVERIFY(fabs(mq9d.i2() - 33.0) < 1e-5);
     QVERIFY(fabs(mq9d.i3() - 44.0) < 1e-5);
-    QVERIFY(fuzzyCompare(mq9d, {11,22,33,44}));
+    QVERIFY(mq9d.fuzzyCompare({11,22,33,44}));
 
     Quaternion q10a(9,6,2,7);
     Quaternion q10b(5,6,7,8);
     q10a /= q10b;
     q10a *= q10b;
-    QVERIFY(fuzzyCompare(q10a, {9,6,2,7}));
+    QVERIFY(q10a.fuzzyCompare({9,6,2,7}));
 
     Quaternion q11a(19,16,12,17);
     Quaternion q11b(15,16,17,18);
     q11a /= q11b;
     q11a *= q11b;
-    QVERIFY(fuzzyCompare(q11a, {19,16,12,17}));
+    QVERIFY(q11a.fuzzyCompare({19,16,12,17}));
 }
 
 void QuaternionUnitTest::test_zero()

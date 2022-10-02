@@ -129,16 +129,16 @@ void BiquaternionUnitTest::test_LT()
     qDebug() << "bg0:" << bg0;
     Quaternion ts0(SPEED_OF_LIGHT, 0., 0., 0.);
     qDebug() << ts0;
-    bg0.lorentzTransformation(ts0);
-    qDebug() << ts0;
+    //bg0.lorentzTransformation(ts0);
+    //qDebug() << ts0;
 
-    for (int i = 0; i < 1000000; ++i)
-    {
-        bg0.lorentzTransformation(ts0);
-    }
-    qDebug() << ts0;
-    QVERIFY(isinf(ts0.re()));
-    QVERIFY(isinf(ts0.i1()));
-    QVERIFY(isinf(ts0.i2()));
-    QVERIFY(isinf(ts0.i3()));
+    //for (int i = 0; i < 1000000; ++i)
+    //{
+    //    bg0.lorentzTransformation(ts0);
+    //}
+    //qDebug() << ts0;
+    //QVERIFY(isinf(ts0.re()));
+    //QVERIFY(isinf(ts0.i1()));
+    //QVERIFY(isinf(ts0.i2()));
+    //QVERIFY(isinf(ts0.i3()));
 }
