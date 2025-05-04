@@ -13,11 +13,16 @@ SOURCES +=  tst_myclassunittest.cpp \
     octonionunittest.cpp \
     quaternionunittest.cpp \
     spacetimetest.cpp \
-    vector3unittest.cpp
+    vector3unittest.cpp \
+    cliffordunittest.cpp
 
 HEADERS += \
+    ../blackhole-simulator/hnn/clifford_common.h \
+    ../blackhole-simulator/hnn/clifford13.h \
+    ../blackhole-simulator/hnn/clifford31.h \
     biquaternionunittest.h \
     octonionunittest.h \
     quaternionunittest.h \
     spacetimetest.h \
-    vector3unittest.h
+    vector3unittest.h\
+    cliffordunittest.h

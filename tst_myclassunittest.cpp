@@ -5,6 +5,7 @@
 #include "octonionunittest.h"
 #include "biquaternionunittest.h"
 #include "spacetimetest.h"
+#include "cliffordunittest.h"
 
 using namespace hnn;
 
@@ -57,6 +58,12 @@ private slots:
     {
         SpacetimeTest st;
         st.test_member();
+    }
+
+    void test_clifford()
+    {
+        CliffordUnitTest ut;
+        ut.test_constructor();
     }
 };
 
